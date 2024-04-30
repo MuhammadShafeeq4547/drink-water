@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drink Water</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .main {
+            width: 100%;
+            min-height: 100vh;
+            background-color: #F0F4F8;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .parent {
+            width: 90%;
+            max-width: 400px;
+            margin-bottom: 20px;
+            border: 1px solid #C7D3E3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .p-drink {
+            font-size: 30px;
+            font-weight: 500;
+            color: #333;
+            letter-spacing: 1px;
+            margin-top: 20px;
+        }
+
+        .p-goal {
+            font-size: 22px;
+            font-weight: 400;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .water-parent {
+            width: 100%;
+            max-width: 200px;
+            height: 330px;
+            background-color: #FCEDEA;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            margin-top: 20px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .parent-water {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            overflow: hidden;
+            left: 0;
+            bottom: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: center;
+        }
+
+        .water {
+            width: 100%;
+            height: 0px;
+            background-color: #A3D7E0;
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .parent2 {
+            width: 90%;
+            max-width: 400px;
+            margin-bottom: 20px;
+            border: 1px solid #C7D3E3;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .p-select {
+            font-size: 19px;
+            font-weight: 400;
+            color: #333;
+            letter-spacing: 1px;
+        }
+
+        .glasses-parent {
+            width: 100%;
+            max-width: 400px;
+            height: 350px;
+            background-color: #FFFAF0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            border-radius: 5px;
+            margin-top: 20px;
+            box-shadow: 0 0.46875rem 2.1875rem rgba(4, 9, 20, 0.436), 0 0.9375rem 1.40625rem rgba(4, 9, 20, 0.202), 0 0.25rem 0.53125rem rgba(4, 9, 20, 0.208), 0 0.125rem 0.1875rem rgba(4, 9, 20, 0.179);
+        }
+
+        .parent-glass {
+            width: 90%;
+            max-width: 300px;
+            height: 40%;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .glass1 {
+            width: 65px;
+            height: 110px;
+            border: 2px solid #6D7993;
+            background-color: #FDFD96;
+            margin-top: 15px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .p-250 {
+            font-size: 20px;
+            font-weight: 500;
+            color: #333;
+        }
+
+        .p-ml {
+            font-size: 18px;
+            font-weight: 400;
+            color: #333;
+        }
+
+        .bgk {
+            background-color: #A3D7E0;
+        }
+
+        .p-water {
+            font-size: 22px;
+            font-weight: 500;
+            color: #FF4500;
+        }
+
+        .p-rem {
+            margin-top: -70px;
+            font-size: 17px;
+            text-align: center;
+            font-weight: 500;
+            color: #333;
+        }
+
+        @media screen and (min-width: 600px) {
+            .parent {
+                width: 45%;
+            }
+
+            .parent2 {
+                width: 45%;
+            }
+        }
+
+        @media screen and (min-width: 768px) {
+            .main {
+                justify-content: space-around;
+            }
+
+            .parent {
+                width: 45%;
+            }
+
+            .parent2 {
+                width: 45%;
+            }
+
+            .parent-glass {
+                width: 90%;
+                max-width: 600px;
+            }
+
+            .glasses-parent {
+                width: 100%;
+                max-width: 600px;
+            }
+        }
+        @media screen and (max-width:700px) {
+            .glasses-parent{
+                height: max-content;
+                padding-bottom: 10px;
+            }
+            .glass1{
+                width: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="main">
+        <div class="parent">
+            <p class="p-drink">Drink Water</p>
+            <p class="p-goal">Goal: 2 Liters</p>
+
+            <div class="water-parent">
+                <div class="parent-water">
+                    <p class="p-rem"></p>
+                    <div class="water">
+                        <p class="p-water"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="parent2">
+            <p class="p-select">Select how many glasses of water that you have drank</p>
+            <div class="glasses-parent">
+                <div class="parent-glass">
+                    <div class="glass1">
+                        <p class="p-250">250</p>
+                        <p class="p-ml">ml</p>
+                    </div>
+                    <div class="glass1">
+                        <p class="p-250">250</p>
+                        <p class="p-ml">ml</p>
+                    </div>
+                    <div class="glass1">
+                        <p class="p-250">250</p>
+                        <p class="p-ml">ml</p>
+                    </div>
+                    <div class="glass1">
+                        <p class="p-250">250</p>
+                        <p class="p-ml">ml</p>
+                    </div>
+                </div>
+                <div class="parent-glass">
+                    <div class="glass1">
+                        <p class="p-250">250</p>
+                        <p class="p-ml">ml</p>
+                    </div>
+                    <div class="glass1">
+                        <p class="p-250">250</p>
+                        <p class="p-ml">ml</p>
+                    </div>
+                    <div class="glass1">
+                        <p class="p-250">250</p>
+                        <p class="p-ml">ml</p>
+                    </div>
+                    <div class="glass1">
+                        <p class="p-250">250</p>
+                        <p class="p-ml">ml</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <script src="./README.md">
+        
+    </script>
+
+</body>
+
+</html>
